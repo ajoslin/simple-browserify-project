@@ -1,0 +1,24 @@
+{
+  "name": "browserif-test",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "browserify index.js > bundle.js",
+    "dev": "budo index.js:bundle.js --open --live",
+    "serve": "httpster -d . -p 4321"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "sheetify"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "budo": "^11.3.2",
+    "httpster": "^1.0.4",
+    "sheetify": "^7.3.3"
+  }
+}
